@@ -2,7 +2,6 @@
 permalink: /
 title: "Ashley C. Craig"
 excerpt: "About me"
-font-size: 14px
 author_profile: true
 redirect_from: 
   - /about/
