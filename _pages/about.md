@@ -1,6 +1,5 @@
 ---
 permalink: /
-excerpt: "About Me"
 font-size: 10px
 author_profile: true
 redirect_from: 
