@@ -84,7 +84,7 @@ author:
   avatar           : "profile.png"
   bio              : "Assistant Professor of Economics at the University of Michigan."
   location         : 
-  employer         : University of Michigan
+  employer         : "University of Michigan"
   #pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=i-VrwzoAAAAJ"
   email            :
