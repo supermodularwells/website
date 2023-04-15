@@ -3,7 +3,6 @@ permalink: /
 title: "Ash Craig"
 excerpt: "About me"
 author_profile: true
-font-size: 12px
 redirect_from: 
   - /about/
   - /about.html
