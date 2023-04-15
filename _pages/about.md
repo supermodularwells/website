@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-## About Me ##
+## About Me
 
 I am a public and labor economist at the University of Michigan [Department of Economics](https://lsa.umich.edu/econ). My current research focuses on human capital investment, taxation, and inequality – especially in environments in which beliefs are formed based on imperfect information. I am also affiliated with the Office of Tax Policy Research, the Institute of Labor Economics and the Tax & Transfer Policy Institute at the Australian National University.
 
