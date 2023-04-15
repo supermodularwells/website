@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Ashley C. Craig"
+title: "Ash Craig"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
