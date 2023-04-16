@@ -11,7 +11,7 @@ I am a Senior Lecturer in Economics at the [Research School of Economics](https:
 
 My research spans Public Economics and Labor Economics, with a particular focus on human capital investment, taxation, and inequality.
 
-Last updated publications and working papers:
+## Last Updated Publications & Working Papers
 - [Optimal Income Taxation with Spillovers from Employer Learning](../files/craig_jmp.pdf) (@AEJ:Policy)
 - [Discipline Reform, School Culture, and Student Achievement](../files/suspensions_paper.pdf) (with [David C. Martin](https://scholar.harvard.edu/david-martin))
 
