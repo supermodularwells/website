@@ -11,6 +11,10 @@ I am a Senior Lecturer in Economics at the [Research School of Economics](https:
 
 My research spans Public Economics and Labor Economics, with a particular focus on human capital investment, taxation, and inequality.
 
+Last updated publications and working papers:
+- [Optimal Income Taxation with Spillovers from Employer Learning](../files/craig_jmp.pdf) (Forthcoming @AEJ:Policy)
+- [Discipline Reform, School Culture, and Student Achievement](../files/suspensions_paper.pdf) (with David C. Martin)
+
 ## Background
 
 Prior to joining ANU, I was an Assistant Professor at the University of Michigan [Department of Economics](https://lsa.umich.edu/econ). I received my PhD in Economics from [Harvard University](https://economics.harvard.edu/) in May 2019, and my undergraduate degree is from the [University of Sydney](https://www.sydney.edu.au/). Previously, I worked as an economist at the [Reserve Bank of Australia](https://www.rba.gov.au/).
