@@ -9,10 +9,10 @@ author_profile: true
 
 
 ### Ec 683/4: Graduate Public Finance
-Semester:  Winter 2020 (w/ James Hines Jr), Winter 2021 (w/ Joel Slemrod), Fall 2021, Winter 2023
-Instructor: Ashley C. Craig
-Evaluations: Winter 2020, Winter 2021, Fall 2021
-Details: Click to expand
+- Semester:  Winter 2020 (w/ James Hines Jr), Winter 2021 (w/ Joel Slemrod), Fall 2021, Winter 2023
+- Instructor: Ashley C. Craig
+- Evaluations: Winter 2020, Winter 2021, Fall 2021
+- Details: Click to expand
 
 ### Ec 490: Advanced Public Economics
 Semester:  Winter 2020, Winter 2021, Fall 2021
@@ -47,25 +47,25 @@ Teaching Assistants: Ashley Craig and others
 
 ## PhD Committees
 
-Thomas Brosy (Urban-Brookings Tax Policy Center)
-George Fenton (Center on Budget and Policy Priorities)
-Chiara Ferrero (IMF)
-Stephanie Karol (Office of Tax Analysis)
-Paul Kindsgrab (Cornerstone)
-Dena Lomonosov (Wisconsin School of Business)
-Nathan Mather (Intensity)
-Jennifer Mayo (University of Missouri)
-Dylan Moore (University of Hawaii)
-Paul Organ (Office of Tax Analysis)
-Andrew Simon (University of Chicago Postdoc)
-Ellen Stuart (Harvard Postdoc → University of Sydney)
-Hayley Abourezk-Pinkstone (current) – co-chair
-Nikhil Rao (current)
-Lea Bart (current)
+- Thomas Brosy (Urban-Brookings Tax Policy Center)
+- George Fenton (Center on Budget and Policy Priorities)
+- Chiara Ferrero (IMF)
+- Stephanie Karol (Office of Tax Analysis)
+- Paul Kindsgrab (Cornerstone)
+- Dena Lomonosov (Wisconsin School of Business)
+- Nathan Mather (Intensity)
+- Jennifer Mayo (University of Missouri)
+- Dylan Moore (University of Hawaii)
+- Paul Organ (Office of Tax Analysis)
+- Andrew Simon (University of Chicago Postdoc)
+- Ellen Stuart (Harvard Postdoc → University of Sydney)
+- Hayley Abourezk-Pinkstone (current) – co-chair
+- Nikhil Rao (current)
+- Lea Bart (current)
 
 ## Honors Students
 
-Dylan Piacelli (Georgia Tech Masters Program)
-George Fan (Carnegie Mellon Masters Program)
+- Dylan Piacelli (Georgia Tech Masters Program)
+- George Fan (Carnegie Mellon Masters Program)
 
 ![Sunrise](../images/IMG_1478.jpg)
