@@ -12,7 +12,7 @@ author_profile: true
 - Semester:  Winter 2020 (w/ James Hines Jr), Winter 2021 (w/ Joel Slemrod), Fall 2021, Winter 2023
 - Instructor: Ashley C. Craig
 - Evaluations: Winter 2020, Winter 2021, Fall 2021
-- Details: Click to expand
+- <details>Text</details>
 
 ### Ec 490: Advanced Public Economics
 Semester:  Winter 2020, Winter 2021, Fall 2021
