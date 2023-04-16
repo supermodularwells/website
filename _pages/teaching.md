@@ -13,4 +13,4 @@ author_profile: true
 
 ## Honors Students
 
-![Sunrise](../images/IMG_1459.jpg)
+![Sunrise](../images/IMG_1478.jpg)
