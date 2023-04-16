@@ -11,8 +11,7 @@ author_profile: true
 ### Ec 683/4: Graduate Public Finance
 - Semester:  Winter 2020 (w/ [James Hines Jr](https://lsa.umich.edu/econ/people/faculty/jrhines.html)), Winter 2021 (w/ [Joel Slemrod](http://webuser.bus.umich.edu/jslemrod/)), Fall 2021, Winter 2023
 - Instructor: Ashley C. Craig
-- Evaluations: Winter 2020, Winter 2021, Fall 2021
-- <details>Text</details>
+- Evaluations: Winter 2020, Winter 2021, Fall 2021 <details>Text</details>
 
 ### Ec 490: Advanced Public Economics
 Semester:  Winter 2020, Winter 2021, Fall 2021
