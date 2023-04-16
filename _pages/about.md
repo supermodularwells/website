@@ -7,7 +7,9 @@ redirect_from:
   - /about.html
 ---
 
-I am a Senior Lecturer in Economics at the [Research School of Economics](https://rse.anu.edu.au/) at Australian National University (ANU), and a John Mitchell Fellow. My research spans Public Economics and Labor Economics, with a particular focus on human capital investment, taxation, and inequality. I am also affiliated with the [Office of Tax Policy Research](https://rossweb.bus.umich.edu/otpr/) at the University of Michigan, the [Institute of Labor Economics](https://www.iza.org/person/21108/ashley-c-craig) and the ANU [Tax & Transfer Policy Institute](https://taxpolicy.crawford.anu.edu.au/taxpolicy-people/research-affiliates).
+I am a Senior Lecturer in Economics at the [Research School of Economics](https://rse.anu.edu.au/) at Australian National University (ANU), and a John Mitchell Fellow.  I am also affiliated with the [Office of Tax Policy Research](https://rossweb.bus.umich.edu/otpr/) at the University of Michigan, the [Institute of Labor Economics](https://www.iza.org/person/21108/ashley-c-craig) and the ANU [Tax & Transfer Policy Institute](https://taxpolicy.crawford.anu.edu.au/taxpolicy-people/research-affiliates).
+
+My research spans Public Economics and Labor Economics, with a particular focus on human capital investment, taxation, and inequality.
 
 ## Background
 
