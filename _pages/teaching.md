@@ -70,5 +70,6 @@ The aim of the course is to foster an understanding of the tools required to ana
 - Dylan Piacelli (Georgia Tech Masters Program)
 - George Fan (Carnegie Mellon Masters Program)
 
+**Kangaroos in Canberra (Mulligan's Flat)**<br>
 ![Sunrise](https://ashleycraig.com/images/IMG_1478.jpg "Kangaroos in Canberra (Mulligan's Flat)")
-**Kangaroos in Canberra (Mulligan's Flat)**
+
