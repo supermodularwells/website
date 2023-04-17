@@ -1,5 +1,6 @@
 ---
 permalink: /
+layout: archive
 font-size: 10px
 author_profile: true
 redirect_from: 
