@@ -12,8 +12,8 @@ From June 2023, I will be a Senior Lecturer in Economics at the [Research School
 My research spans Public Economics and Labor Economics, with a particular focus on human capital investment, taxation, and inequality.
 
 ## Last Updated Publications & Working Papers
-- [Optimal Income Taxation with Spillovers from Employer Learning](../files/craig_jmp.pdf) (@AEJ:Policy)
-- [Discipline Reform, School Culture, and Student Achievement](../files/suspensions_paper.pdf) (with [David C. Martin](https://scholar.harvard.edu/david-martin))
+- [Optimal Income Taxation with Spillovers from Employer Learning](../../files/craig_jmp.pdf) (@AEJ:Policy)
+- [Discipline Reform, School Culture, and Student Achievement](../../files/suspensions_paper.pdf) (with [David C. Martin](https://scholar.harvard.edu/david-martin))
 
 ## Background
 
