@@ -5,7 +5,7 @@ permalink: /teaching/
 author_profile: true
 ---
 
-## Teaching
+## Instruction
 
 
 ### Ec 683/4: Graduate Public Finance (University of Michigan)
