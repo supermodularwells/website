@@ -65,7 +65,7 @@ The aim of the course is to foster an understanding of the tools required to ana
 - Nikhil Rao (current)
 - Lea Bart (current)
 
-## Honors Students
+## Honors Advisees
 
 - Dylan Piacelli (Georgia Tech Masters Program)
 - George Fan (Carnegie Mellon Masters Program)
