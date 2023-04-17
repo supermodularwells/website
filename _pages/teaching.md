@@ -70,4 +70,4 @@ The aim of the course is to foster an understanding of the tools required to ana
 - Dylan Piacelli (Georgia Tech Masters Program)
 - George Fan (Carnegie Mellon Masters Program)
 
-![Sunrise](../../images/IMG_1478.jpg)
+![Sunrise](https://ashleycraig.com/images/IMG_1478.jpg "Sunrise in Canberra (Mulligan's Flat)")
