@@ -31,4 +31,5 @@ Improving Youth Hiring Decisions with Data and Machine Predictions (with [Hyunji
 
 Can More Objective Performance Information Overcome Gender Differences in Interview Evaluations? (with [Clémentine Van Effenterre](https://sites.google.com/site/vaneffenterreclementine/home))
 
-![Kangaroos](https://ashleycraig.com/images/IMG_1459.jpg "Kangaroos in Canberra (Mulligan's Flat)")
+![Sunrise](https://ashleycraig.com/images/IMG_1459.jpg "Sunrise in Canberra (Mulligan's Flat)")
+<br>**Sunrise in Canberra (Mulligan's Flat)**
