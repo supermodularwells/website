@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-From June 2023, I will be a Senior Lecturer in Economics at the [Research School of Economics](https://rse.anu.edu.au/) at the Australian National University (ANU), and a John Mitchell Fellow.  I am also affiliated with the [Office of Tax Policy Research](https://rossweb.bus.umich.edu/otpr/) at the University of Michigan, the [Institute of Labor Economics](https://www.iza.org/person/21108/ashley-c-craig) and the ANU [Tax & Transfer Policy Institute](https://taxpolicy.crawford.anu.edu.au/taxpolicy-people/research-affiliates).
+From June 2023, I will be a Senior Lecturer in Economics at the [Research School of Economics](https://rse.anu.edu.au/) at the Australian National University (ANU), and a John Mitchell Fellow.  I am also affiliated with the [Office of Tax Policy Research](https://rossweb.bus.umich.edu/otpr/) at the University of Michigan, the [Institute of Labor Economics](https://www.iza.org/person/21108/ashley-c-craig) and the ANU [Tax & Transfer Policy Institute](https://taxpolicy.crawford.anu.edu.au/taxpolicy-people/research-affiliates). 
 
 My research spans Public Economics and Labor Economics, with a particular focus on human capital investment, taxation, and inequality.
 
