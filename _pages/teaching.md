@@ -64,6 +64,7 @@ The aim of the course is to foster an understanding of the tools required to ana
 - Hayley Abourezk-Pinkstone (current) – co-chair
 - Nikhil Rao (current)
 - Lea Bart (current)
+- John Olson (current)
 
 ## Honors Advisees
 
