@@ -30,5 +30,5 @@ author_profile: true
 - George Fan (Carnegie Mellon Masters Program)
 
 
-![Sunrise](https://ashleycraig.com/images/IMG_1478.jpg "Kangaroos in Canberra (Mulligan's Flat)")
+![Sunrise](https://ashleycraig.com/images/ooroo.jpg "Road Sign (Sculptures By The Sea)")
 <br>**Kangaroos in Canberra (Mulligan's Flat)**
