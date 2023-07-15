@@ -5,9 +5,6 @@ permalink: /teaching/
 author_profile: true
 ---
 
-## Instruction
-
-
 ### Ec 683/4: Graduate Public Finance (University of Michigan)
 - Semester:  Winter 2020 (w/ [James Hines Jr](https://lsa.umich.edu/econ/people/faculty/jrhines.html)), Winter 2021 (w/ [Joel Slemrod](http://webuser.bus.umich.edu/jslemrod/)), Fall 2021, Winter 2023
 - Instructor: Ashley C. Craig
@@ -44,32 +41,6 @@ The aim of the course is to foster an understanding of the tools required to ana
 - Semester: Semester 1 2009 (University of Sydney)
 - Instructor: [Andrew Wait](https://www.sydney.edu.au/arts/about/our-people/academic-staff/andrew-wait.html)
 - Teaching Assistants: Ashley Craig and others
-
-
-
-## PhD Committees
-
-- Thomas Brosy (Urban-Brookings Tax Policy Center)
-- George Fenton (Center on Budget and Policy Priorities)
-- Chiara Ferrero (IMF)
-- Stephanie Karol (Office of Tax Analysis)
-- Paul Kindsgrab (Cornerstone)
-- Dena Lomonosov (Wisconsin School of Business)
-- Nathan Mather (Intensity)
-- Jennifer Mayo (University of Missouri)
-- Dylan Moore (University of Hawaii)
-- Paul Organ (Office of Tax Analysis)
-- Andrew Simon (University of Chicago Postdoc)
-- Ellen Stuart (Harvard Postdoc → University of Sydney)
-- Hayley Abourezk-Pinkstone (current) – co-chair
-- Nikhil Rao (current)
-- Lea Bart (current)
-- John Olson (current)
-
-## Honors Advisees
-
-- Dylan Piacelli (Georgia Tech Masters Program)
-- George Fan (Carnegie Mellon Masters Program)
 
 
 ![Sunrise](https://ashleycraig.com/images/IMG_1478.jpg "Kangaroos in Canberra (Mulligan's Flat)")
