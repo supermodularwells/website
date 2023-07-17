@@ -31,5 +31,22 @@ Improving Youth Hiring Decisions with Data and Machine Predictions (with [Hyunji
 
 Can More Objective Performance Information Overcome Gender Differences in Interview Evaluations? (with [Clémentine Van Effenterre](https://sites.google.com/site/vaneffenterreclementine/home))
 
+## Writing For Broader Audiences
+
+1. **Craig AC (2023)**. "The government should butt out on the RBA and focus on its own failings", Sydney Morning Herald, June 11. [[Online](https://www.smh.com.au/business/the-economy/the-government-should-butt-out-on-the-rba-and-focus-on-its-own-failings-20230609-p5dfgz.html)] 
+
+2. **Craig AC \& [Lilley M](https://cbe.anu.edu.au/about/staff-directory/matthew-lilley) (2021)**. "ATAGI misses the point of the jab", Australian Financial Review, July 22. [[Online](https://www.afr.com/policy/economy/atagi-misses-the-point-of-the-jab-20210720-p58bd6)] 
+
+3. **Craig AC (2016)**, Submission DR85, Education Evidence Base - Public Inquiry, Productivity Commission. [Online](https://www.pc.gov.au/__data/assets/word_doc/0009/207675/subdr085-education-evidence.docx)
+
+4. **Craig AC (2021)**. "Banking Fees in Australia", RBA Bulletin, June Quarter. [[Online](https://www.rba.gov.au/publications/bulletin/2014/jun/pdf/bu-0614-5.pdf)]
+   
+5. **Craig AC, [Elias S](https://sites.google.com/view/stephenelias) \& Noone C (2011)**. "Destinations and Uses of East Asian Merchandise Export", RBA Bulletin, June Quarter. [[Online](https://www.rba.gov.au/publications/bulletin/2011/jun/pdf/bu-0611-2.pdf)] 
+
+
+
+
+
+
 ![Sunrise](https://ashleycraig.com/images/IMG_1459.jpg "Sunrise in Canberra (Mulligan's Flat)")
 <br>**Sunrise in Canberra (Mulligan's Flat)**
