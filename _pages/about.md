@@ -13,8 +13,9 @@ I am a Senior Lecturer in Economics at the [Research School of Economics](https:
 My research spans Public Economics and Labor Economics, with a particular focus on human capital investment, taxation, and inequality.
 
 ## Last Updated Publications & Working Papers
+- [Does Better Information Reduce Gender Discrimination in the Technology Industry?](../../files/ACV.pdf) (with [Abdelrahman Amer](https://bfi.uchicago.edu/scholar/amer-abdelrahman/) and [Clémentine van Effenterre](https://sites.google.com/site/vaneffenterreclementine/home))
+- [Tax Knowledge and Tax Manipulation: A Unifying Model](../../files/knowledge.pdf) (with [Joel Slemrod](https://webuser.bus.umich.edu/jslemrod/))
 - [Optimal Income Taxation with Spillovers from Employer Learning](../../files/craig_jmp.pdf) (@AEJ:Policy)
-- [Discipline Reform, School Culture, and Student Achievement](../../files/suspensions_paper.pdf) (with [David C. Martin](https://scholar.harvard.edu/david-martin))
 
 ## Background
 
