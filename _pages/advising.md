@@ -19,10 +19,11 @@ author_profile: true
 - Paul Organ (Office of Tax Analysis)
 - Andrew Simon (University of Chicago Postdoc)
 - Ellen Stuart (Harvard Postdoc → University of Sydney)
-- Hayley Abourezk-Pinkstone (current) – co-chair
+- Hayley Abourezk-Pinkstone (current) – co-chair of committee
 - Nikhil Rao (current)
 - Lea Bart (current)
 - John Olson (current)
+- Yuzhi Zhou (current) – chair of committee
 
 ## Honors Advisees
 
