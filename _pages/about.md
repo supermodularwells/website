@@ -23,7 +23,7 @@ Prior to joining ANU, I was an Assistant Professor at the University of Michigan
 
 While at Harvard, I was a [James M. and Cathleen D. Stone Ph.D. Scholar in Inequality and Wealth Concentration](https://inequality.hks.harvard.edu/fellowship-awards), and recipient of a Lara Warner Ph.D. fellowship from the [Harvard Kennedy School Women and Public Policy Program](https://www.hks.harvard.edu/centers/wappp). I received teaching awards from both Harvard University and the University of Sydney. In 2020, I received the [IIPF Young Economists Award](https://www.iipf.org/yeaw.htm) from the [International Institute of Public Finance](https://www.iipf.org/index.htm).
 
-In addition to support from my home institutions, I am grateful for the support my research has received from the [National Science Foundation](https://www.nsf.gov), [J-PAL](https://www.povertyactionlab.org/na), the [National Bureau of Economic Research](https://www.nber.org), and the [Russell Sage Foundation](http://www.russellsage.org).
+In addition to support from my home institutions, I am grateful for the funding my research has received from the [National Science Foundation](https://www.nsf.gov), [J-PAL](https://www.povertyactionlab.org/na), the [National Bureau of Economic Research](https://www.nber.org), and the [Russell Sage Foundation](http://www.russellsage.org).
 
 ![Kangaroos](https://ashleycraig.com/images/IMG_1487.jpg "Kangaroos in Canberra (Mulligan's Flat)")
 <br>**Kangaroos in Canberra (Mulligan's Flat)**
