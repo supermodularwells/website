@@ -14,7 +14,7 @@ My research spans Public Economics and Labor Economics, with a particular focus 
 
 
  **I Have 3 Students On the 2023/24 Job Market!**
- - [Hayley Abourezk-Pinkstone](https://sites.google.com/view/hayley-abourezk-pinkstone) |
+ - [Hayley Abourezk-Pinkstone](https://sites.google.com/view/hayley-abourezk-pinkstone)
  - [John Olson](https://www.johnsolson.com) 
  - [Emily Horton](https://www.emily-horton.com)
 
