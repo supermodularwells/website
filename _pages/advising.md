@@ -18,13 +18,14 @@ author_profile: true
 - Dylan Moore (University of Hawaii)
 - Paul Organ (Office of Tax Analysis)
 - Andrew Simon (University of Chicago Postdoc)
-- Ellen Stuart (Harvard Postdoc → University of Sydney)
-- Hayley Abourezk-Pinkstone (2023/24 job market!) – co-chair of committee
-- John Olson (2023/24 job market!)
-- Emily Horton (2023/24 job market!)
+- [Ellen Stuart](https://www.ellenstuart.com) (Harvard Postdoc → University of Sydney)
+- [Hayley Abourezk-Pinkstone](https://sites.google.com/view/hayley-abourezk-pinkstone) (<font color=red>2023/24 job market!</font>) – co-chair of committee
+- [John Olson](https://www.johnsolson.com) (<font color=red>2023/24 job market!</font>)
+- [Emily Horton](https://www.emily-horton.com) (<font color=red>2023/24 job market!</font>)
 - Nikhil Rao (current)
 - Lea Bart (current)
 - Yuzhi Zhou (current) – chair of committee
+
 
 ## Honors Advisees
 
