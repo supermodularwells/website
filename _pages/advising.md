@@ -7,12 +7,12 @@ author_profile: true
 
 ## PhD Committees
 
-- Thomas Brosy (Urban-Brookings Tax Policy Center)
-- George Fenton (Center on Budget and Policy Priorities)
-- Chiara Ferrero (IMF)
-- Stephanie Karol (Office of Tax Analysis)
-- Paul Kindsgrab (Cornerstone)
-- Dena Lomonosov (Wisconsin School of Business)
+- [Thomas Brosy](https://www.urban.org/author/thomas-brosy) (Urban-Brookings Tax Policy Center)
+- [George Fenton](https://www.cbpp.org/about/our-staff/george-fenton) (Center on Budget and Policy Priorities)
+- [Chiara Ferrero](https://deepblue.lib.umich.edu/handle/2027.42/169665) (IMF)
+- [Stephanie Karol](https://www.stephanie-a-karol.com) (Office of Tax Analysis)
+- [Paul Kindsgrab](https://sites.google.com/view/paulmkindsgrab/home) (Cornerstone)
+- [Dena Lomonosov](https://www.dena-lomonosov.com) (Wisconsin School of Business)
 - [Nathan Mather](https://www.linkedin.com/in/nathan-mather-phd-70979924b/) (Intensity)
 - [Jennifer Mayo](https://www.jennifer-mayo.com) (University of Missouri)
 - [Dylan Moore](https://www.dylantmoore.com/) (University of Hawaii)
