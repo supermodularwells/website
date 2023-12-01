@@ -13,7 +13,7 @@ I am a Senior Lecturer in Economics at the [Research School of Economics](https:
 My research spans Public Economics and Labor Economics, with a particular focus on human capital investment, taxation, and inequality.
 
 
- **I Have 3 Students On the 2023/24 Job Market!**
+ **Students On The 2023/24 Job Market!**
  - [Hayley Abourezk-Pinkstone](https://sites.google.com/view/hayley-abourezk-pinkstone)
  - [John Olson](https://www.johnsolson.com) 
  - [Emily Horton](https://www.emily-horton.com)
