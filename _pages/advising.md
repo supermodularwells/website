@@ -13,10 +13,10 @@ author_profile: true
 - Stephanie Karol (Office of Tax Analysis)
 - Paul Kindsgrab (Cornerstone)
 - Dena Lomonosov (Wisconsin School of Business)
-- Nathan Mather (Intensity)
-- Jennifer Mayo (University of Missouri)
-- Dylan Moore (University of Hawaii)
-- Paul Organ (Office of Tax Analysis)
+- [Nathan Mather](https://www.linkedin.com/in/nathan-mather-phd-70979924b/) (Intensity)
+- [Jennifer Mayo](https://www.jennifer-mayo.com) (University of Missouri)
+- [Dylan Moore](https://www.dylantmoore.com/) (University of Hawaii)
+- [Paul Organ](https://www.paulorgan.com/#) (Office of Tax Analysis)
 - [Andrew Simon](https://andrewrsimon.com) (University of Chicago Postdoc → <font color=red>2023/24 job market!)
 - [Ellen Stuart](https://www.ellenstuart.com) (Harvard Postdoc → University of Sydney)
 - [Hayley Abourezk-Pinkstone](https://sites.google.com/view/hayley-abourezk-pinkstone) (<font color=red>2023/24 job market!</font>) – co-chair of committee
@@ -24,7 +24,7 @@ author_profile: true
 - [Emily Horton](https://www.emily-horton.com) (<font color=red>2023/24 job market!</font>)
 - [Nikhil Rao](https://lsa.umich.edu/econ/people/phd-students/nikhil-rao.html) (current)
 - [Lea Bart](https://www.lea-bart.com/home) (current)
-- Yuzhi Zhou (current) – chair of committee
+- [Yuzhi Zhou](https://cbe.anu.edu.au/about/staff-directory/yuzhi-zhou) (current) – chair of committee
 
 
 ## Honors Advisees
