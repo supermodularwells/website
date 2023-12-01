@@ -22,8 +22,8 @@ author_profile: true
 - [Hayley Abourezk-Pinkstone](https://sites.google.com/view/hayley-abourezk-pinkstone) (<font color=red>2023/24 job market!</font>) – co-chair of committee
 - [John Olson](https://www.johnsolson.com) (<font color=red>2023/24 job market!</font>)
 - [Emily Horton](https://www.emily-horton.com) (<font color=red>2023/24 job market!</font>)
-- Nikhil Rao (current)
-- Lea Bart (current)
+- [Nikhil Rao](https://lsa.umich.edu/econ/people/phd-students/nikhil-rao.html) (current)
+- [Lea Bart](https://www.lea-bart.com/home) (current)
 - Yuzhi Zhou (current) – chair of committee
 
 
