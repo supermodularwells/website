@@ -13,10 +13,10 @@ I am a Senior Lecturer in Economics at the [Research School of Economics](https:
 My research spans Public Economics and Labor Economics, with a particular focus on human capital investment, taxation, and inequality.
 
 
-| **I have three students on the market this year** |
-| - Hayley Abourezk-Pinkstone |
-| - John Olson |
-| - Emily Horton |
+ **I Have 3 Students On the 2023/24 Job Market!**
+ - [Hayley Abourezk-Pinkstone](https://sites.google.com/view/hayley-abourezk-pinkstone) |
+ - [John Olson](https://www.johnsolson.com) 
+ - [Emily Horton](https://www.emily-horton.com)
 
 ## Last Updated Publications & Working Papers
 - [Does Better Information Reduce Gender Discrimination in the Technology Industry?](../../files/ACV.pdf) (with [Abdelrahman Amer](https://bfi.uchicago.edu/scholar/amer-abdelrahman/) and [Clémentine van Effenterre](https://sites.google.com/site/vaneffenterreclementine/home))
