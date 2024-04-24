@@ -13,7 +13,7 @@ I am a Senior Lecturer in Economics at the [Research School of Economics](https:
 My research spans Public Economics and Labor Economics, with a particular focus on human capital investment, taxation, and inequality.
 
 ## Last Updated Publications & Working Papers
-- [Does Better Information Reduce Gender Discrimination in the Technology Industry?](../../files/ACV.pdf) (with [Abdelrahman Amer](https://bfi.uchicago.edu/scholar/amer-abdelrahman/) and [Clémentine van Effenterre](https://sites.google.com/site/vaneffenterreclementine/home))
+- [Deconding Gender Bias: The Role of Personal Interaction](../../files/ACV.pdf) (with [Abdelrahman Amer](https://bfi.uchicago.edu/scholar/amer-abdelrahman/) and [Clémentine van Effenterre](https://sites.google.com/site/vaneffenterreclementine/home))
 - [Tax Knowledge and Tax Manipulation: A Unifying Model](../../files/knowledge.pdf) (accepted @JPE:Micro with [Joel Slemrod](https://webuser.bus.umich.edu/jslemrod/))
 
 ## Background
