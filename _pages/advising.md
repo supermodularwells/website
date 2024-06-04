@@ -24,6 +24,8 @@ author_profile: true
 - [Emily Horton](https://www.emily-horton.com) (Office of Tax Analysis)
 - [Nikhil Rao](https://lsa.umich.edu/econ/people/phd-students/nikhil-rao.html) (current)
 - [Lea Bart](https://www.lea-bart.com/home) (current)
+- [Peter Choi](https://lsa.umich.edu/econ/people/phd-students/peterjc.html) (current)
+- [Chandler Inman](https://lsa.umich.edu/econ/people/phd-students/inmanch.html) (current)
 - [Yuzhi Zhou](https://cbe.anu.edu.au/about/staff-directory/yuzhi-zhou) (current) – chair of committee
 
 
