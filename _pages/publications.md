@@ -31,8 +31,9 @@ Second Best Externality Correction (with [Thomas Lloyd](https://lsa.umich.edu/ec
 
 Using Network Data to Measure Social Returns and Improve Targeting of Crime-Reduction Interventions (with [Sara Heller](https://sites.google.com/view/sara-heller/home) and [Nikhil Rao](https://lsa.umich.edu/econ/people/phd-students/nikhil-rao.html)) [[Preliminary Note on READI Spillovers](https://drive.google.com/file/d/1rbkj03yo_RAN2qdtjJFhhvS4WhcgApR2/view)]
 
-Improving Youth Hiring Decisions with Data and Machine Predictions (with [Hyunjin Kim](https://www.kimhyunjin.com/))
+Improving Hiring Decisions with Data and Machine Predictions (with [Hyunjin Kim](https://www.kimhyunjin.com/))
 
+Tax Salience: The Equality-Honesty-Efficiency Tradeoff (with [Itai Sher](https://sites.google.com/site/itaisher/))
 
 ## Writing For Broader Audiences
 
