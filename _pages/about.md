@@ -12,7 +12,7 @@ I am a Senior Lecturer in Economics at the [Research School of Economics](https:
 
 My research spans Public Economics and Labor Economics, with a particular focus on human capital investment, taxation, and inequality.
 
-## Job Market Candidates 2024/25!
+## <font color="red">Job Market Candidates</font> (2024/25)
 - [Lea Bart](https://sites.google.com/view/lea-bart/home)
 - [Nikhil Rao](https://sites.google.com/view/nikhil-rao/research)
 - [Peter Choi](https://lsa.umich.edu/econ/people/phd-students/peterjc.html)
