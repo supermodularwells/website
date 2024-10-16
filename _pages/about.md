@@ -15,7 +15,7 @@ My research spans Public Economics and Labor Economics, with a particular focus 
 ## <font color="purple">Job Market Candidates</font> (2024/25)
 - [Lea Bart](https://sites.google.com/view/lea-bart/home)
 - [Nikhil Rao](https://sites.google.com/view/nikhil-rao/research)
-- [Peter Choi](https://lsa.umich.edu/econ/people/phd-students/peterjc.html)
+- [Peter Choi](https://sites.google.com/view/peterjchoi)
 
 ## Last Updated Publications & Working Papers
 - [Decoding Gender Bias: The Role of Personal Interaction](../../files/ACV.pdf) (with [Abdelrahman Amer](https://bfi.uchicago.edu/scholar/amer-abdelrahman/) and [Clémentine van Effenterre](https://sites.google.com/site/vaneffenterreclementine/home))
