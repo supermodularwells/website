@@ -33,6 +33,7 @@ author_profile: true
 
 - Dylan Piacelli (Georgia Tech Masters Program)
 - George Fan (Carnegie Mellon Masters Program)
+- Kai Song (current)
 
 
 ![Sunrise](https://ashleycraig.com/images/ooroo.jpg "Road Sign (Sculptures By The Sea)")
