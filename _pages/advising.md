@@ -22,8 +22,8 @@ author_profile: true
 13. [Hayley Abourezk-Pinkstone](https://sites.google.com/view/hayley-abourezk-pinkstone) (Simpson College) – co-chair of committee
 14. [John Olson](https://www.johnsolson.com) (Northwestern University)
 15. [Emily Horton](https://www.emily-horton.com) (Office of Tax Analysis)
-16. [Nikhil Rao](https://lsa.umich.edu/econ/people/phd-students/nikhil-rao.html) (current)
-17. [Lea Bart](https://www.lea-bart.com/home) (current)
+16. [Nikhil Rao](https://lsa.umich.edu/econ/people/phd-students/nikhil-rao.html) (National Bureau of Economic Research)
+17. [Lea Bart](https://www.lea-bart.com/home) (Congressional Budget Office)
 18. [Peter Choi](https://lsa.umich.edu/econ/people/phd-students/peterjc.html) (current)
 19. [Chandler Inman](https://lsa.umich.edu/econ/people/phd-students/inmanch.html) (current)
 20. [Yuzhi Zhou](https://cbe.anu.edu.au/about/staff-directory/yuzhi-zhou) (current) – chair of committee
