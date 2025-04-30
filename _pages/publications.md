@@ -35,7 +35,9 @@ Tax Salience: The Equality-Honesty-Efficiency Tradeoff (with [Itai Sher](https:/
 
 ## Writing For Broader Audiences
 
-1. **Craig AC (2025)**. "Forget band-aids, this economy needs genuine reform", 360info, February 12. [[Online](https://360info.org/forget-band-aids-this-economy-needs-genuine-reform/)]
+1. **Craig AC & Heiniger C (2025)**. "Why it’s time to think big on tax reform", 360info, April 30. [[Online](https://360info.org/why-its-time-to-think-big-on-tax-reform/)]
+
+2. **Craig AC (2025)**. "Forget band-aids, this economy needs genuine reform", 360info, February 12. [[Online](https://360info.org/forget-band-aids-this-economy-needs-genuine-reform/)]
    
 3. **Craig AC (2023)**. "The government should butt out on the RBA and focus on its own failings", Sydney Morning Herald, June 11. [[Online](https://www.smh.com.au/business/the-economy/the-government-should-butt-out-on-the-rba-and-focus-on-its-own-failings-20230609-p5dfgz.html)] 
 
