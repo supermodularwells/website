@@ -8,6 +8,9 @@ main:
 
   - title: "Advising"
     url: /advising/     
+
+  - title: "Seminars"
+    url: "/seminars/"
     
   - title: "CV"
     url: "/files/AshleyCCraig_CV.pdf"
