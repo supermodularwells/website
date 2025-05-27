@@ -29,6 +29,7 @@ author_profile: true
 20. [Yuzhi Zhou](https://cbe.anu.edu.au/about/staff-directory/yuzhi-zhou) (current) – chair of committee
 21. [Shulei Zhang](https://cbe.anu.edu.au/about/staff-directory/shulei-zhang) (current)
 22. [Shinsuke Nakagami](https://rse.anu.edu.au/about/staff-directory/shinsuke-nakagami) (current)
+23. [Harshit Shah](https://cbe.anu.edu.au/about/staff-directory/harshit-shah) (current)
 
 
 ## Honors Advisees
