@@ -16,7 +16,7 @@ My other affiliations include the [Office of Tax Policy Research](https://rosswe
 
 ## Last Updated Publications & Working Papers
 - [Decoding Gender Bias: The Role of Personal Interaction](../../files/ACV.pdf) (with [Abdelrahman Amer](https://bfi.uchicago.edu/scholar/amer-abdelrahman/) and [Clémentine van Effenterre](https://sites.google.com/site/vaneffenterreclementine/home))
-- [Discipline Reform, School Culture, and Student Achievement](../../files/suspensions_paper.pdf) (with [David Martin](https://scholar.harvard.edu/david-martin))
+- [Discipline Reform, School Culture, and Student Achievement](../../files/suspensions_paper.pdf) (with [David Martin](https://scholar.harvard.edu/david-martin), forthcoming @ the EJ)
 
 ## Background
 
