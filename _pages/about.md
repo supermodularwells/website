@@ -10,7 +10,7 @@ redirect_from:
 
 I am a Senior Lecturer in Economics at the [Research School of Economics](https://rse.anu.edu.au/) at the Australian National University (ANU), and a John Mitchell Fellow. My research spans Public Economics and Labor Economics, with a particular focus on human capital investment, taxation, and inequality.
 
-My other affiliations include the [Office of Tax Policy Research](https://rossweb.bus.umich.edu/otpr/) at the University of Michigan, the [CESifo Research Network](https://www.en.ces.econ.uni-muenchen.de/ces-visiting-program/ces-visiting-scholars/2024/craig/index.html), the [Institute of Labor Economics](https://www.iza.org/person/21108/ashley-c-craig) and the ANU [Tax & Transfer Policy Institute](https://www.austaxpolicy.com/about/). I am also the Chair of the R.G. Menzies Fellowship commitee. 
+My other affiliations include the [Office of Tax Policy Research](https://rossweb.bus.umich.edu/otpr/) at the University of Michigan, the [CESifo Research Network](https://www.en.ces.econ.uni-muenchen.de/ces-visiting-program/ces-visiting-scholars/2024/craig/index.html), the [Institute of Labor Economics](https://www.iza.org/person/21108/ashley-c-craig) and the ANU [Tax & Transfer Policy Institute](https://www.austaxpolicy.com/about/). I am also the Chair of the R.G. Menzies fellowship commitee. 
 
 **General Seminar.** I run the General Seminar at the ANU Research School of Economics. See the [seminar page](https://ashleycraig.com/seminars/) for information about the seminar and how to stay up to date with the schedule.
 
