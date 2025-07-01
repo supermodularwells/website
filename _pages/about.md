@@ -12,7 +12,7 @@ I am a Senior Lecturer in Economics at the [Research School of Economics](https:
 
 My other affiliations include the [Office of Tax Policy Research](https://rossweb.bus.umich.edu/otpr/) at the University of Michigan, the [CESifo Research Network](https://www.en.ces.econ.uni-muenchen.de/ces-visiting-program/ces-visiting-scholars/2024/craig/index.html), the [Institute of Labor Economics](https://www.iza.org/person/21108/ashley-c-craig) and the ANU [Tax & Transfer Policy Institute](https://www.austaxpolicy.com/about/). I am also the Chair of the R.G. Menzies fellowship commitee. 
 
-**General Seminar.** I run the General Seminar at the ANU Research School of Economics. See the [seminar page](https://ashleycraig.com/seminars/) for information about the seminar and how to stay up to date with the schedule.
+**General Seminar.** I run the General Seminar at the ANU Research School of Economics. See the [seminar page](https://ashleycraig.com/gensem/) for information about the seminar and how to stay up to date with the schedule.
 
 ## Last Updated Publications & Working Papers
 - [Decoding Gender Bias: The Role of Personal Interaction](../../files/ACV.pdf) (with [Abdelrahman Amer](https://bfi.uchicago.edu/scholar/amer-abdelrahman/) and [Clémentine van Effenterre](https://sites.google.com/site/vaneffenterreclementine/home))
