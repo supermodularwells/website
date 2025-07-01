@@ -55,21 +55,25 @@
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
-                <div class="flex items-center space-x-4">
+                <div class="flex-1 flex justify-start">
                     <img src="https://rse.anu.edu.au/sites/default/files/2x_anu_logo_small_over.png" alt="ANU Logo" class="h-12" onerror="this.style.display='none'">
-                    <h1 class="text-xl md:text-2xl font-bold text-gray-800">ANU RSE Seminars</h1>
                 </div>
-                <nav class="hidden md:flex items-center space-x-8 text-lg font-medium text-gray-600">
-                    <a id="nav-upcoming" class="nav-link active-nav">Upcoming</a>
-                    <a id="nav-past" class="nav-link">Past</a>
-                    <a id="nav-faq" class="nav-link">FAQ</a>
-                </nav>
-                 <div class="md:hidden">
-                    <select id="mobile-nav" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
-                        <option value="upcoming" selected>Upcoming</option>
-                        <option value="past">Past</option>
-                        <option value="faq">FAQ</option>
-                    </select>
+                <div class="flex-1 text-center">
+                    <h1 class="text-xl md:text-2xl font-bold text-gray-800">RSE General Seminar</h1>
+                </div>
+                <div class="flex-1 flex justify-end">
+                    <nav class="hidden md:flex items-center space-x-8 text-lg font-medium text-gray-600">
+                        <a id="nav-upcoming" class="nav-link active-nav">Upcoming</a>
+                        <a id="nav-past" class="nav-link">Past</a>
+                        <a id="nav-faq" class="nav-link">FAQ</a>
+                    </nav>
+                     <div class="md:hidden">
+                        <select id="mobile-nav" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                            <option value="upcoming" selected>Upcoming</option>
+                            <option value="past">Past</option>
+                            <option value="faq">FAQ</option>
+                        </select>
+                    </div>
                 </div>
             </div>
         </div>
@@ -103,18 +107,26 @@
         <div id="upcoming-seminars">
             <div class="flex justify-between items-center mb-8">
                 <h2 class="text-3xl font-bold">Upcoming Seminars</h2>
-                <div id="view-toggle" class="hidden space-x-2">
-                    <button id="card-view-btn" class="view-toggle-btn active">Cards</button>
-                    <button id="table-view-btn" class="view-toggle-btn">Table</button>
+                <div id="upcoming-view-toggle" class="hidden space-x-2">
+                    <button id="upcoming-card-view-btn" class="view-toggle-btn active">Cards</button>
+                    <button id="upcoming-table-view-btn" class="view-toggle-btn">Table</button>
                 </div>
             </div>
-            <div id="seminar-cards-container"></div>
-            <div id="seminar-table-container" class="hidden"></div>
+            <div id="upcoming-seminar-cards-container"></div>
+            <div id="upcoming-seminar-table-container" class="hidden"></div>
         </div>
 
         <!-- Past Seminars -->
         <div id="past-seminars" class="hidden">
-            <!-- Content will be injected by JavaScript -->
+             <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold">Past Seminars</h2>
+                <div id="past-view-toggle" class="hidden space-x-2">
+                    <button id="past-card-view-btn" class="view-toggle-btn active">Cards</button>
+                    <button id="past-table-view-btn" class="view-toggle-btn">Table</button>
+                </div>
+            </div>
+            <div id="past-seminar-cards-container"></div>
+            <div id="past-seminar-table-container" class="hidden"></div>
         </div>
 
         <!-- FAQ Section -->
@@ -142,11 +154,18 @@
             const loader = document.getElementById('loader');
             const errorMessage = document.getElementById('error-message');
             const welcomeSection = document.getElementById('welcome');
-            const viewToggle = document.getElementById('view-toggle');
-            const cardViewBtn = document.getElementById('card-view-btn');
-            const tableViewBtn = document.getElementById('table-view-btn');
-            const cardsContainer = document.getElementById('seminar-cards-container');
-            const tableContainer = document.getElementById('seminar-table-container');
+            
+            const upcomingViewToggle = document.getElementById('upcoming-view-toggle');
+            const upcomingCardViewBtn = document.getElementById('upcoming-card-view-btn');
+            const upcomingTableViewBtn = document.getElementById('upcoming-table-view-btn');
+            const upcomingCardsContainer = document.getElementById('upcoming-seminar-cards-container');
+            const upcomingTableContainer = document.getElementById('upcoming-seminar-table-container');
+
+            const pastViewToggle = document.getElementById('past-view-toggle');
+            const pastCardViewBtn = document.getElementById('past-card-view-btn');
+            const pastTableViewBtn = document.getElementById('past-table-view-btn');
+            const pastCardsContainer = document.getElementById('past-seminar-cards-container');
+            const pastTableContainer = document.getElementById('past-seminar-table-container');
 
             const navLinks = {
                 upcoming: document.getElementById('nav-upcoming'),
@@ -163,7 +182,8 @@
             const mobileNav = document.getElementById('mobile-nav');
 
             // --- State ---
-            let currentView = 'cards';
+            let upcomingView = 'cards';
+            let pastView = 'cards';
 
             // --- Initial Setup ---
             document.getElementById('year').textContent = new Date().getFullYear();
@@ -224,23 +244,43 @@
             mobileNav.addEventListener('change', (e) => switchMainView(e.target.value));
 
             // --- View Toggle Logic ---
-            cardViewBtn.addEventListener('click', () => {
-                if (currentView === 'table') {
-                    currentView = 'cards';
-                    tableViewBtn.classList.remove('active');
-                    cardViewBtn.classList.add('active');
-                    tableContainer.classList.add('hidden');
-                    cardsContainer.classList.remove('hidden');
+            upcomingCardViewBtn.addEventListener('click', () => {
+                if (upcomingView === 'table') {
+                    upcomingView = 'cards';
+                    upcomingTableViewBtn.classList.remove('active');
+                    upcomingCardViewBtn.classList.add('active');
+                    upcomingTableContainer.classList.add('hidden');
+                    upcomingCardsContainer.classList.remove('hidden');
                 }
             });
 
-            tableViewBtn.addEventListener('click', () => {
-                if (currentView === 'cards') {
-                    currentView = 'table';
-                    cardViewBtn.classList.remove('active');
-tableViewBtn.classList.add('active');
-                    cardsContainer.classList.add('hidden');
-                    tableContainer.classList.remove('hidden');
+            upcomingTableViewBtn.addEventListener('click', () => {
+                if (upcomingView === 'cards') {
+                    upcomingView = 'table';
+                    upcomingCardViewBtn.classList.remove('active');
+                    upcomingTableViewBtn.classList.add('active');
+                    upcomingCardsContainer.classList.add('hidden');
+                    upcomingTableContainer.classList.remove('hidden');
+                }
+            });
+            
+            pastCardViewBtn.addEventListener('click', () => {
+                if (pastView === 'table') {
+                    pastView = 'cards';
+                    pastTableViewBtn.classList.remove('active');
+                    pastCardViewBtn.classList.add('active');
+                    pastTableContainer.classList.add('hidden');
+                    pastCardsContainer.classList.remove('hidden');
+                }
+            });
+
+            pastTableViewBtn.addEventListener('click', () => {
+                if (pastView === 'cards') {
+                    pastView = 'table';
+                    pastCardViewBtn.classList.remove('active');
+                    pastTableViewBtn.classList.add('active');
+                    pastCardsContainer.classList.add('hidden');
+                    pastTableContainer.classList.remove('hidden');
                 }
             });
 
@@ -304,7 +344,7 @@ tableViewBtn.classList.add('active');
                     pastEvents.sort((a, b) => b.startDate - a.startDate);
 
                     displayUpcomingEvents(upcomingEvents);
-                    displayPastEvents(pastEvents, document.getElementById('past-seminars'));
+                    displayPastEvents(pastEvents);
                     loader.classList.add('hidden');
                 } catch (error) {
                     console.error('Error fetching or parsing iCal data:', error);
@@ -363,11 +403,11 @@ tableViewBtn.classList.add('active');
             // --- Display Logic ---
             function displayUpcomingEvents(events) {
                 if (events.length === 0) {
-                    cardsContainer.innerHTML = `<div class="text-center bg-white p-8 rounded-lg shadow"><p class="text-gray-500">No upcoming seminars to display.</p></div>`;
+                    upcomingCardsContainer.innerHTML = `<div class="text-center bg-white p-8 rounded-lg shadow"><p class="text-gray-500">No upcoming seminars to display.</p></div>`;
                     return;
                 }
                 
-                viewToggle.classList.remove('hidden');
+                upcomingViewToggle.classList.remove('hidden');
                 
                 // CARDS VIEW
                 const cardsGrid = document.createElement('div');
@@ -391,8 +431,8 @@ tableViewBtn.classList.add('active');
                             ${formattedDescription ? `<div class="bg-gray-50 p-6 border-t"><h4 class="font-semibold text-gray-700 mb-2">Details & Links</h4><div class="text-sm text-gray-600 space-y-2 event-description break-words">${formattedDescription}</div></div>` : ''}
                         </div>`;
                 });
-                cardsContainer.innerHTML = '';
-                cardsContainer.appendChild(cardsGrid);
+                upcomingCardsContainer.innerHTML = '';
+                upcomingCardsContainer.appendChild(cardsGrid);
 
                 // TABLE VIEW
                 let tableHTML = `<div class="bg-white shadow-md rounded-lg overflow-x-auto"><table class="min-w-full divide-y divide-gray-200"><thead class="bg-gray-50"><tr>
@@ -412,20 +452,22 @@ tableViewBtn.classList.add('active');
                     </tr>`;
                 });
                 tableHTML += `</tbody></table></div>`;
-                tableContainer.innerHTML = tableHTML;
+                upcomingTableContainer.innerHTML = tableHTML;
             }
 
-            function displayPastEvents(events, container) {
-                container.innerHTML = `<h2 class="text-3xl font-bold mb-8 text-center">Past Seminars</h2>`;
+            function displayPastEvents(events) {
                 if (events.length === 0) {
-                    container.innerHTML += `<div class="text-center bg-white p-8 rounded-lg shadow"><p class="text-gray-500">No past seminars to display.</p></div>`;
+                    pastCardsContainer.innerHTML = `<div class="text-center bg-white p-8 rounded-lg shadow"><p class="text-gray-500">No past seminars to display.</p></div>`;
                     return;
                 }
-                const grid = document.createElement('div');
-                grid.className = 'grid gap-8 md:grid-cols-2 lg:grid-cols-3';
+                
+                pastViewToggle.classList.remove('hidden');
+
+                // CARDS VIEW
+                const cardsGrid = document.createElement('div');
+                cardsGrid.className = 'grid gap-8 md:grid-cols-2 lg:grid-cols-3';
                 events.forEach(event => {
-                    const formattedDescription = formatDescription(event.description);
-                    grid.innerHTML += `
+                    cardsGrid.innerHTML += `
                         <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col transition-shadow hover:shadow-xl opacity-70">
                             <div class="p-6 flex-grow">
                                 <p class="text-sm text-gray-500 font-semibold">${formatEventDate(event.startDate)}</p>
@@ -435,10 +477,26 @@ tableViewBtn.classList.add('active');
                                     <div class="flex items-start"><svg class="w-5 h-5 mr-3 mt-1 text-gray-400 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg><span>Location: <strong>${event.location}</strong></span></div>
                                 </div>
                             </div>
-                            ${formattedDescription ? `<div class="bg-gray-50 p-6 border-t"><h4 class="font-semibold text-gray-700 mb-2">Details & Links</h4><div class="text-sm text-gray-600 space-y-2 event-description break-words">${formattedDescription}</div></div>` : ''}
                         </div>`;
                 });
-                container.appendChild(grid);
+                pastCardsContainer.innerHTML = '';
+                pastCardsContainer.appendChild(cardsGrid);
+                
+                // TABLE VIEW
+                let tableHTML = `<div class="bg-white shadow-md rounded-lg overflow-x-auto"><table class="min-w-full divide-y divide-gray-200"><thead class="bg-gray-50"><tr>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Speaker</th>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Location</th>
+                    </tr></thead><tbody class="bg-white divide-y divide-gray-200">`;
+                events.forEach(event => {
+                    tableHTML += `<tr>
+                        <td class="px-6 py-4 whitespace-nowrap"><div class="text-sm font-medium text-gray-900">${formatEventDate(event.startDate)}</div><div class="text-sm text-gray-500">${formatEventTime(event.startDate, event.endDate)}</div></td>
+                        <td class="px-6 py-4 whitespace-nowrap"><div class="text-sm text-gray-900">${event.speaker}</div></td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${event.location}</td>
+                    </tr>`;
+                });
+                tableHTML += `</tbody></table></div>`;
+                pastTableContainer.innerHTML = tableHTML;
             }
 
             // --- Initial Load ---
