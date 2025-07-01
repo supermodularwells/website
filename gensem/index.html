@@ -86,12 +86,12 @@
         <section id="welcome" class="mb-12 text-center bg-white p-8 rounded-xl shadow">
              <p class="text-lg text-gray-600 max-w-3xl mx-auto">
                 Welcome to the central hub for the <strong>General Seminar</strong> of the ANU Research School of Economics. This series features leading academics and researchers from around the world presenting their latest findings on a wide range of economic topics.
-            </p>
-            <br>
-            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-            <strong>Google</strong> users can subscribe to the <font color="blue"><u><a href="https://calendar.google.com/calendar/u/0?cid=Y183NTBiMjA4MDVmODRmMjBkYmJmMGYzOWZlMzc4YzcyYjU1MGNlN2JkZmM3OGJkMjYyNzhmZTk5YWNiYjcwODI1QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">Google Calendar</a></u></font>. 
-            <strong>Outlook</strong> users can add the <font color=blue><u><a href="https://calendar.google.com/calendar/ical/c_750b20805f84f20dbbf0f39fe378c72b550ce7bdfc78bd26278fe99acbb70825%40group.calendar.google.com/public/basic.ics" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">Outlook Calendar (iCal)</a></u></font> as a public calendar via the Outlook web interface.
-            </p>
+             </p>
+             <br>
+             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                <strong>Google</strong> users can subscribe to the <font color="blue"><u><a href="https://calendar.google.com/calendar/u/0?cid=Y183NTBiMjA4MDVmODRmMjBkYmJmMGYzOWZlMzc4YzcyYjU1MGNlN2JkZmM3OGJkMjYyNzhmZTk5YWNiYjcwODI1QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">Google Calendar</a></u></font>. 
+                <strong>Outlook</strong> users can add the <font color=blue><u><a href="https://calendar.google.com/calendar/ical/c_750b20805f84f20dbbf0f39fe378c72b550ce7bdfc78bd26278fe99acbb70825%40group.calendar.google.com/public/basic.ics" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">Outlook Calendar (iCal)</a></u></font> as a public calendar via the Outlook web interface.
+             </p>
         </section>
 
         <!-- Loading Spinner -->
@@ -376,13 +376,24 @@
 
                 let text = '';
                 if (diffDays < 0) return '';
-                if (diffDays === 0) text = 'TODAY';
-                else if (diffDays === 1) text = 'TOMORROW';
-                else if (diffDays < 7) text = `IN ${diffDays} DAYS`;
-                else if (diffDays < 14) text = 'NEXT WEEK';
-                else if (diffDays < 30) text = `IN ${Math.ceil(diffDays / 7)} WEEKS`;
-                else if (diffDays < 365) text = `IN ${Math.ceil(diffDays / 30.44)} MONTHS`;
-                else text = 'OVER A YEAR AWAY';
+                if (diffDays === 0) {
+                    text = 'TODAY';
+                } else if (diffDays === 1) {
+                    text = 'TOMORROW';
+                } else if (diffDays < 7) {
+                    text = `IN ${diffDays} DAYS`;
+                } else if (diffDays < 14) {
+                    text = 'NEXT WEEK';
+                } else if (diffDays < 30) {
+                    const diffWeeks = Math.ceil(diffDays / 7);
+                    text = `IN ${diffWeeks} ${diffWeeks === 1 ? 'WEEK' : 'WEEKS'}`;
+                } else if (diffDays < 365) {
+                    const diffMonths = Math.ceil(diffDays / 30.44);
+                    text = `IN ${diffMonths} ${diffMonths === 1 ? 'MONTH' : 'MONTHS'}`;
+                } else {
+                    const diffYears = Math.floor(diffDays / 365);
+                    text = `IN ${diffYears} ${diffYears === 1 ? 'YEAR' : 'YEARS'}`;
+                }
 
                 const dayOfWeek = now.getDay();
                 const startOfWeek = new Date(now);
