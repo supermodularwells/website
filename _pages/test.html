@@ -24,6 +24,29 @@
         .nav-link:hover {
             color: #3B82F6; /* blue-500 */
         }
+        /* Styling for links within the description */
+        .event-description a {
+            color: #2563EB; /* blue-600 */
+            text-decoration: underline;
+        }
+        .event-description a:hover {
+            color: #1D4ED8; /* blue-700 */
+        }
+        .view-toggle-btn {
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s, color 0.2s;
+        }
+        .view-toggle-btn.active {
+            background-color: #3B82F6; /* blue-500 */
+            color: white;
+        }
+        .view-toggle-btn:not(.active) {
+            background-color: #E5E7EB; /* gray-200 */
+            color: #374151; /* gray-700 */
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -33,9 +56,7 @@
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
                 <div class="flex items-center space-x-4">
-                    <svg class="w-10 h-10 text-blue-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
-                    </svg>
+                    <img src="https://rse.anu.edu.au/sites/default/files/2x_anu_logo_small_over.png" alt="ANU Logo" class="h-12" onerror="this.style.display='none'">
                     <h1 class="text-xl md:text-2xl font-bold text-gray-800">ANU RSE Seminars</h1>
                 </div>
                 <nav class="hidden md:flex items-center space-x-8 text-lg font-medium text-gray-600">
@@ -80,7 +101,15 @@
 
         <!-- Upcoming Seminars -->
         <div id="upcoming-seminars">
-            <!-- Content will be injected by JavaScript -->
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold">Upcoming Seminars</h2>
+                <div id="view-toggle" class="hidden space-x-2">
+                    <button id="card-view-btn" class="view-toggle-btn active">Cards</button>
+                    <button id="table-view-btn" class="view-toggle-btn">Table</button>
+                </div>
+            </div>
+            <div id="seminar-cards-container"></div>
+            <div id="seminar-table-container" class="hidden"></div>
         </div>
 
         <!-- Past Seminars -->
@@ -109,11 +138,15 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+            // --- DOM Elements ---
             const loader = document.getElementById('loader');
             const errorMessage = document.getElementById('error-message');
-            const upcomingContainer = document.getElementById('upcoming-seminars');
-            const pastContainer = document.getElementById('past-seminars');
             const welcomeSection = document.getElementById('welcome');
+            const viewToggle = document.getElementById('view-toggle');
+            const cardViewBtn = document.getElementById('card-view-btn');
+            const tableViewBtn = document.getElementById('table-view-btn');
+            const cardsContainer = document.getElementById('seminar-cards-container');
+            const tableContainer = document.getElementById('seminar-table-container');
 
             const navLinks = {
                 upcoming: document.getElementById('nav-upcoming'),
@@ -129,27 +162,18 @@
             
             const mobileNav = document.getElementById('mobile-nav');
 
-            // Set current year in footer
+            // --- State ---
+            let currentView = 'cards';
+
+            // --- Initial Setup ---
             document.getElementById('year').textContent = new Date().getFullYear();
 
-            // --- FAQ Data and Generation ---
+            // --- FAQ ---
             const faqs = [
-                {
-                    question: "How do I register to attend a seminar?",
-                    answer: "Registration is generally not required for our public seminars. Simply join using the provided link or attend at the specified location. For special workshops or conferences, registration details will be provided in the event description."
-                },
-                {
-                    question: "Are the seminars open to the public?",
-                    answer: "Yes, most of our seminars are open to all members of the ANU community and the general public unless otherwise specified."
-                },
-                {
-                    question: "Where can I find recordings of past seminars?",
-                    answer: "We aim to record our seminars when possible and with the speaker's permission. If a recording is available, a link will be added to the event details on the 'Past Seminars' page."
-                },
-                {
-                    question: "Who can I contact for more information?",
-                    answer: "For specific questions about a seminar, please refer to the contact person listed in the event details. For general inquiries about the seminar series, please contact the RSE administration."
-                }
+                { question: "How do I register to attend a seminar?", answer: "Registration is generally not required for our public seminars. Simply join using the provided link or attend at the specified location. For special workshops or conferences, registration details will be provided in the event description." },
+                { question: "Are the seminars open to the public?", answer: "Yes, most of our seminars are open to all members of the ANU community and the general public unless otherwise specified." },
+                { question: "Where can I find recordings of past seminars?", answer: "We aim to record our seminars when possible and with the speaker's permission. If a recording is available, a link will be added to the event details on the 'Past Seminars' page." },
+                { question: "Who can I contact for more information?", answer: "For specific questions about a seminar, please refer to the contact person listed in the event details. For general inquiries about the seminar series, please contact the RSE administration." }
             ];
 
             function generateFaqs() {
@@ -161,32 +185,26 @@
                     item.innerHTML = `
                         <button class="w-full flex justify-between items-center p-5 text-left font-medium text-gray-700 hover:bg-gray-100 focus:outline-none" data-faq-toggle="${index}">
                             <span>${faq.question}</span>
-                            <svg class="w-5 h-5 shrink-0 transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                            </svg>
+                            <svg class="w-5 h-5 shrink-0 transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
                         </button>
-                        <div id="faq-answer-${index}" class="hidden p-5 border-t border-gray-200 text-gray-600">
-                            ${faq.answer}
-                        </div>
-                    `;
+                        <div id="faq-answer-${index}" class="hidden p-5 border-t border-gray-200 text-gray-600">${faq.answer}</div>`;
                     accordion.appendChild(item);
                 });
-
-                document.querySelectorAll('[data-faq-toggle]').forEach(button => {
-                    button.addEventListener('click', () => {
+                accordion.addEventListener('click', (e) => {
+                    const button = e.target.closest('[data-faq-toggle]');
+                    if (button) {
                         const answerId = `faq-answer-${button.dataset.faqToggle}`;
                         const answer = document.getElementById(answerId);
                         const icon = button.querySelector('svg');
-                        
                         const isHidden = answer.classList.contains('hidden');
                         answer.classList.toggle('hidden');
                         icon.classList.toggle('rotate-180', isHidden);
-                    });
+                    }
                 });
             }
 
-            // --- Navigation Logic ---
-            function switchView(view) {
+            // --- Navigation ---
+            function switchMainView(view) {
                 Object.keys(sections).forEach(key => {
                     sections[key].classList.add('hidden');
                     navLinks[key].classList.remove('active-nav');
@@ -194,94 +212,99 @@
                 welcomeSection.classList.toggle('hidden', view !== 'upcoming');
                 sections[view].classList.remove('hidden');
                 navLinks[view].classList.add('active-nav');
-                
-                if (mobileNav.value !== view) {
-                    mobileNav.value = view;
-                }
+                if (mobileNav.value !== view) mobileNav.value = view;
             }
 
             Object.keys(navLinks).forEach(key => {
                 navLinks[key].addEventListener('click', (e) => {
                     e.preventDefault();
-                    switchView(key);
+                    switchMainView(key);
                 });
             });
-            
-            mobileNav.addEventListener('change', (e) => {
-                 switchView(e.target.value);
+            mobileNav.addEventListener('change', (e) => switchMainView(e.target.value));
+
+            // --- View Toggle Logic ---
+            cardViewBtn.addEventListener('click', () => {
+                if (currentView === 'table') {
+                    currentView = 'cards';
+                    tableViewBtn.classList.remove('active');
+                    cardViewBtn.classList.add('active');
+                    tableContainer.classList.add('hidden');
+                    cardsContainer.classList.remove('hidden');
+                }
             });
 
+            tableViewBtn.addEventListener('click', () => {
+                if (currentView === 'cards') {
+                    currentView = 'table';
+                    cardViewBtn.classList.remove('active');
+tableViewBtn.classList.add('active');
+                    cardsContainer.classList.add('hidden');
+                    tableContainer.classList.remove('hidden');
+                }
+            });
 
-            // --- iCal Data Fetching and Processing ---
+            // --- Calendar Data Fetching & Processing ---
             async function fetchAndProcessCalendar() {
-                // The original CORS proxy was causing a 403 error.
-                // Switched to a different proxy (allorigins.win) to resolve the issue.
                 const icalUrl = 'https://calendar.google.com/calendar/ical/c_750b20805f84f20dbbf0f39fe378c72b550ce7bdfc78bd26278fe99acbb70825%40group.calendar.google.com/public/basic.ics';
                 const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(icalUrl)}`;
-                
                 try {
                     const response = await fetch(proxyUrl);
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
-                    }
+                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                     const data = await response.text();
-                    
                     const jcalData = ICAL.parse(data);
                     const vcalendar = new ICAL.Component(jcalData);
                     const vevents = vcalendar.getAllSubcomponents('vevent');
-
                     const now = new Date();
                     const upcomingEvents = [];
                     const pastEvents = [];
 
                     vevents.forEach(vevent => {
                         const event = new ICAL.Event(vevent);
-                        const eventData = {
-                            title: event.summary,
-                            startDate: event.startDate.toJSDate(),
-                            endDate: event.endDate.toJSDate(),
-                            location: event.location || 'N/A',
-                            description: event.description || ''
-                        };
-
-                        if (event.isRecurring()) {
-                            const iterator = event.iterator();
-                            let next;
-                            // Limit the number of recurring events to avoid performance issues
-                            const maxRecurrences = 100; 
-                            let recurrenceCount = 0;
-                            while ((next = iterator.next()) && recurrenceCount < maxRecurrences) {
-                                const nextStartDate = next.toJSDate();
-                                // Only process events from the last year and in the future
-                                if (nextStartDate >= now.getTime() - (365 * 24 * 60 * 60 * 1000)) { 
-                                     const duration = event.duration.toSeconds() * 1000;
-                                     const nextEndDate = new Date(nextStartDate.getTime() + duration);
-                                     
-                                     const occurrenceData = { ...eventData, startDate: nextStartDate, endDate: nextEndDate };
-                                     if (nextStartDate >= now) {
-                                         upcomingEvents.push(occurrenceData);
-                                     } else {
-                                         pastEvents.push(occurrenceData);
-                                     }
-                                }
-                                recurrenceCount++;
+                        const processEvent = (startDate, endDate) => {
+                            const fullTitle = event.summary;
+                            let speaker = 'TBA';
+                            if (fullTitle && fullTitle.toLowerCase().startsWith('seminar: ')) {
+                                speaker = fullTitle.substring('seminar: '.length).trim();
                             }
-                        } else {
-                             if (eventData.startDate >= now) {
+                            const eventData = {
+                                title: fullTitle,
+                                speaker: speaker,
+                                startDate: startDate,
+                                endDate: endDate,
+                                location: event.location || 'N/A',
+                                description: event.description || ''
+                            };
+                            if (startDate >= now) {
                                 upcomingEvents.push(eventData);
                             } else {
                                 pastEvents.push(eventData);
                             }
+                        };
+                        
+                        if (event.isRecurring()) {
+                            const iterator = event.iterator();
+                            let next;
+                            let count = 0;
+                            while ((next = iterator.next()) && count < 100) {
+                                const nextStartDate = next.toJSDate();
+                                const duration = event.duration.toSeconds() * 1000;
+                                const nextEndDate = new Date(nextStartDate.getTime() + duration);
+                                if (nextEndDate > new Date(now.getTime() - 365 * 24 * 60 * 60 * 1000)) { // Only from last year
+                                    processEvent(nextStartDate, nextEndDate);
+                                }
+                                count++;
+                            }
+                        } else {
+                            processEvent(event.startDate.toJSDate(), event.endDate.toJSDate());
                         }
                     });
 
-                    // Sort events
                     upcomingEvents.sort((a, b) => a.startDate - b.startDate);
                     pastEvents.sort((a, b) => b.startDate - a.startDate);
 
-                    displayEvents(upcomingEvents, upcomingContainer, 'Upcoming Seminars');
-                    displayEvents(pastEvents, pastContainer, 'Past Seminars');
-
+                    displayUpcomingEvents(upcomingEvents);
+                    displayPastEvents(pastEvents, document.getElementById('past-seminars'));
                     loader.classList.add('hidden');
                 } catch (error) {
                     console.error('Error fetching or parsing iCal data:', error);
@@ -289,73 +312,136 @@
                     errorMessage.classList.remove('hidden');
                 }
             }
-            
-            function formatEventDate(date) {
-                return date.toLocaleDateString('en-AU', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
-            }
 
+            // --- Date & Time Formatting ---
+            function formatEventDate(date) { return date.toLocaleDateString('en-AU', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }); }
             function formatEventTime(startDate, endDate) {
                 const options = { hour: 'numeric', minute: '2-digit', hour12: true };
-                const startTime = startDate.toLocaleTimeString('en-AU', options).replace(' ', '');
-                const endTime = endDate.toLocaleTimeString('en-AU', options).replace(' ', '');
-                return `${startTime} - ${endTime}`;
+                return `${startDate.toLocaleTimeString('en-AU', options).replace(' ', '')} - ${endDate.toLocaleTimeString('en-AU', options).replace(' ', '')}`;
             }
-            
-            function parseDescription(description) {
-                // Attempt to extract speaker name if it follows a pattern like "Speaker:"
-                const speakerMatch = description.match(/Speaker:\s*(.*)/i);
-                let speaker = 'TBA';
-                if(speakerMatch && speakerMatch[1]) {
-                    // Clean up potential extra text after speaker name
-                    speaker = speakerMatch[1].split(/\\n/)[0].trim();
+            function formatDescription(description) { return description ? description.replace(/\\n/g, '<br>') : ''; }
+
+            function getRelativeTimeBadge(startDate) {
+                const now = new Date();
+                now.setHours(0, 0, 0, 0);
+                const eventDate = new Date(startDate);
+                eventDate.setHours(0, 0, 0, 0);
+
+                const diffTime = eventDate - now;
+                const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+                let text = '';
+                if (diffDays < 0) return '';
+                if (diffDays === 0) text = 'TODAY';
+                else if (diffDays === 1) text = 'TOMORROW';
+                else if (diffDays < 7) text = `IN ${diffDays} DAYS`;
+                else if (diffDays < 14) text = 'NEXT WEEK';
+                else if (diffDays < 30) text = `IN ${Math.ceil(diffDays / 7)} WEEKS`;
+                else if (diffDays < 365) text = `IN ${Math.ceil(diffDays / 30.44)} MONTHS`;
+                else text = 'OVER A YEAR AWAY';
+
+                const dayOfWeek = now.getDay();
+                const startOfWeek = new Date(now);
+                startOfWeek.setDate(now.getDate() - (dayOfWeek === 0 ? 6 : dayOfWeek - 1));
+                const endOfWeek = new Date(startOfWeek);
+                endOfWeek.setDate(startOfWeek.getDate() + 6);
+                const startOfNextWeek = new Date(endOfWeek);
+                startOfNextWeek.setDate(endOfWeek.getDate() + 1);
+                const endOfNextWeek = new Date(startOfNextWeek);
+                endOfNextWeek.setDate(startOfNextWeek.getDate() + 6);
+                
+                let colorClass = 'bg-blue-100 text-blue-800'; // Default
+                if (eventDate >= startOfWeek && eventDate <= endOfWeek) {
+                    colorClass = 'bg-red-100 text-red-800';
+                } else if (eventDate >= startOfNextWeek && eventDate <= endOfNextWeek) {
+                    colorClass = 'bg-orange-100 text-orange-800';
                 }
-                return { speaker };
+                
+                return `<span class="px-2 py-1 text-xs font-bold leading-none rounded-full ${colorClass}">${text}</span>`;
             }
 
-            function displayEvents(events, container, title) {
-                container.innerHTML = `<h2 class="text-3xl font-bold mb-8 text-center">${title}</h2>`;
-                
+            // --- Display Logic ---
+            function displayUpcomingEvents(events) {
                 if (events.length === 0) {
-                    container.innerHTML += `<div class="text-center bg-white p-8 rounded-lg shadow"><p class="text-gray-500">No ${title.toLowerCase()} to display at this time.</p></div>`;
+                    cardsContainer.innerHTML = `<div class="text-center bg-white p-8 rounded-lg shadow"><p class="text-gray-500">No upcoming seminars to display.</p></div>`;
                     return;
                 }
-
-                const grid = document.createElement('div');
-                grid.className = 'grid gap-8 md:grid-cols-2 lg:grid-cols-3';
-
+                
+                viewToggle.classList.remove('hidden');
+                
+                // CARDS VIEW
+                const cardsGrid = document.createElement('div');
+                cardsGrid.className = 'grid gap-8 md:grid-cols-2 lg:grid-cols-3';
                 events.forEach(event => {
-                    const { speaker } = parseDescription(event.description);
-                    const card = `
-                        <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col transition-transform transform hover:-translate-y-1">
+                    const badge = getRelativeTimeBadge(event.startDate);
+                    const formattedDescription = formatDescription(event.description);
+                    cardsGrid.innerHTML += `
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col transition-shadow hover:shadow-xl">
                             <div class="p-6 flex-grow">
-                                <p class="text-sm text-blue-600 font-semibold">${formatEventDate(event.startDate)}</p>
-                                <h3 class="font-bold text-xl mt-2 mb-3 text-gray-800">${event.title}</h3>
+                                <div class="flex justify-between items-center mb-4">
+                                    <p class="text-sm text-blue-600 font-semibold">${formatEventDate(event.startDate)}</p>
+                                    ${badge}
+                                </div>
                                 <div class="text-gray-600 space-y-3">
-                                    <div class="flex items-center">
-                                        <svg class="w-5 h-5 mr-3 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg>
-                                        <span>Speaker: <strong>${speaker}</strong></span>
-                                    </div>
-                                    <div class="flex items-center">
-                                        <svg class="w-5 h-5 mr-3 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                                        <span>${formatEventTime(event.startDate, event.endDate)}</span>
-                                    </div>
-                                    <div class="flex items-center">
-                                        <svg class="w-5 h-5 mr-3 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
-                                        <span>Location: <strong>${event.location}</strong></span>
-                                    </div>
+                                    <div class="flex items-start"><svg class="w-5 h-5 mr-3 mt-1 text-gray-400 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg><span>Speaker: <strong>${event.speaker}</strong></span></div>
+                                    <div class="flex items-center"><svg class="w-5 h-5 mr-3 text-gray-400 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg><span>${formatEventTime(event.startDate, event.endDate)}</span></div>
+                                    <div class="flex items-start"><svg class="w-5 h-5 mr-3 mt-1 text-gray-400 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg><span>Location: <strong>${event.location}</strong></span></div>
                                 </div>
                             </div>
-                            <div class="bg-gray-50 p-4 border-t">
-                                <a href="#" class="text-sm font-semibold text-blue-600 hover:text-blue-800" onclick="alert('Details would be shown in a modal or on a separate page.'); return false;">View Details &rarr;</a>
+                            ${formattedDescription ? `<div class="bg-gray-50 p-6 border-t"><h4 class="font-semibold text-gray-700 mb-2">Details & Links</h4><div class="text-sm text-gray-600 space-y-2 event-description break-words">${formattedDescription}</div></div>` : ''}
+                        </div>`;
+                });
+                cardsContainer.innerHTML = '';
+                cardsContainer.appendChild(cardsGrid);
+
+                // TABLE VIEW
+                let tableHTML = `<div class="bg-white shadow-md rounded-lg overflow-x-auto"><table class="min-w-full divide-y divide-gray-200"><thead class="bg-gray-50"><tr>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Speaker</th>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Location</th>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Details</th>
+                    </tr></thead><tbody class="bg-white divide-y divide-gray-200">`;
+                events.forEach(event => {
+                    const badge = getRelativeTimeBadge(event.startDate);
+                    const formattedDescription = formatDescription(event.description);
+                    tableHTML += `<tr>
+                        <td class="px-6 py-4 whitespace-nowrap"><div class="text-sm font-medium text-gray-900">${formatEventDate(event.startDate)}</div><div class="text-sm text-gray-500">${formatEventTime(event.startDate, event.endDate)}</div><div class="mt-2">${badge}</div></td>
+                        <td class="px-6 py-4 whitespace-nowrap"><div class="text-sm text-gray-900">${event.speaker}</div></td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${event.location}</td>
+                        <td class="px-6 py-4 text-sm text-gray-500 event-description">${formattedDescription || 'N/A'}</td>
+                    </tr>`;
+                });
+                tableHTML += `</tbody></table></div>`;
+                tableContainer.innerHTML = tableHTML;
+            }
+
+            function displayPastEvents(events, container) {
+                container.innerHTML = `<h2 class="text-3xl font-bold mb-8 text-center">Past Seminars</h2>`;
+                if (events.length === 0) {
+                    container.innerHTML += `<div class="text-center bg-white p-8 rounded-lg shadow"><p class="text-gray-500">No past seminars to display.</p></div>`;
+                    return;
+                }
+                const grid = document.createElement('div');
+                grid.className = 'grid gap-8 md:grid-cols-2 lg:grid-cols-3';
+                events.forEach(event => {
+                    const formattedDescription = formatDescription(event.description);
+                    grid.innerHTML += `
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col transition-shadow hover:shadow-xl opacity-70">
+                            <div class="p-6 flex-grow">
+                                <p class="text-sm text-gray-500 font-semibold">${formatEventDate(event.startDate)}</p>
+                                <div class="text-gray-600 space-y-3 mt-4">
+                                    <div class="flex items-start"><svg class="w-5 h-5 mr-3 mt-1 text-gray-400 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg><span>Speaker: <strong>${event.speaker}</strong></span></div>
+                                    <div class="flex items-center"><svg class="w-5 h-5 mr-3 text-gray-400 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg><span>${formatEventTime(event.startDate, event.endDate)}</span></div>
+                                    <div class="flex items-start"><svg class="w-5 h-5 mr-3 mt-1 text-gray-400 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg><span>Location: <strong>${event.location}</strong></span></div>
+                                </div>
                             </div>
-                        </div>
-                    `;
-                    grid.innerHTML += card;
+                            ${formattedDescription ? `<div class="bg-gray-50 p-6 border-t"><h4 class="font-semibold text-gray-700 mb-2">Details & Links</h4><div class="text-sm text-gray-600 space-y-2 event-description break-words">${formattedDescription}</div></div>` : ''}
+                        </div>`;
                 });
                 container.appendChild(grid);
             }
 
-            // Initial Load
+            // --- Initial Load ---
             generateFaqs();
             fetchAndProcessCalendar();
         });
