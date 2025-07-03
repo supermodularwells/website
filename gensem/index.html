@@ -385,6 +385,16 @@
                 const diffTime = eventDate - now;
                 const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
+                const dayOfWeek = now.getDay();
+                const startOfWeek = new Date(now);
+                startOfWeek.setDate(now.getDate() - (dayOfWeek === 0 ? 6 : dayOfWeek - 1));
+                const endOfWeek = new Date(startOfWeek);
+                endOfWeek.setDate(startOfWeek.getDate() + 6);
+                const startOfNextWeek = new Date(endOfWeek);
+                startOfNextWeek.setDate(endOfWeek.getDate() + 1);
+                const endOfNextWeek = new Date(startOfNextWeek);
+                endOfNextWeek.setDate(startOfNextWeek.getDate() + 6);
+                
                 let text = '';
                 if (diffDays < 0) return '';
                 if (diffDays === 0) {
@@ -393,7 +403,9 @@
                     text = 'TOMORROW';
                 } else if (diffDays < 7) {
                     text = `IN ${diffDays} DAYS`;
-                } else if (diffDays < 14) {
+                } else if (eventDate >= startOfWeek && eventDate <= endOfWeek) {
+                    text = 'THIS WEEK';
+                } else if (eventDate >= startOfNextWeek && eventDate <= endOfNextWeek) {
                     text = 'NEXT WEEK';
                 } else if (diffDays < 30) {
                     const diffWeeks = Math.ceil(diffDays / 7);
@@ -406,16 +418,6 @@
                     text = `IN ${diffYears} ${diffYears === 1 ? 'YEAR' : 'YEARS'}`;
                 }
 
-                const dayOfWeek = now.getDay();
-                const startOfWeek = new Date(now);
-                startOfWeek.setDate(now.getDate() - (dayOfWeek === 0 ? 6 : dayOfWeek - 1));
-                const endOfWeek = new Date(startOfWeek);
-                endOfWeek.setDate(startOfWeek.getDate() + 6);
-                const startOfNextWeek = new Date(endOfWeek);
-                startOfNextWeek.setDate(endOfWeek.getDate() + 1);
-                const endOfNextWeek = new Date(startOfNextWeek);
-                endOfNextWeek.setDate(startOfNextWeek.getDate() + 6);
-                
                 let colorClass = 'bg-blue-100 text-blue-800'; // Default
                 if (eventDate >= startOfWeek && eventDate <= endOfWeek) {
                     colorClass = 'bg-red-100 text-red-800';
