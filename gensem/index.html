@@ -402,20 +402,20 @@
                 } else if (diffDays === 1) {
                     text = 'TOMORROW';
                 } else if (diffDays < 7) {
-                    text = `IN ${diffDays} DAYS`;
+                    text = `${diffDays} DAYS`;
                 } else if (eventDate >= startOfWeek && eventDate <= endOfWeek) {
                     text = 'THIS WEEK';
                 } else if (eventDate >= startOfNextWeek && eventDate <= endOfNextWeek) {
                     text = 'NEXT WEEK';
                 } else if (diffDays < 30) {
                     const diffWeeks = Math.ceil(diffDays / 7);
-                    text = `IN ${diffWeeks} ${diffWeeks === 1 ? 'WEEK' : 'WEEKS'}`;
+                    text = `${diffWeeks} ${diffWeeks === 1 ? 'WEEK' : 'WEEKS'}`;
                 } else if (diffDays < 365) {
                     const diffMonths = Math.ceil(diffDays / 30.44);
-                    text = `IN ${diffMonths} ${diffMonths === 1 ? 'MONTH' : 'MONTHS'}`;
+                    text = `${diffMonths} ${diffMonths === 1 ? 'MONTH' : 'MONTHS'}`;
                 } else {
                     const diffYears = Math.floor(diffDays / 365);
-                    text = `IN ${diffYears} ${diffYears === 1 ? 'YEAR' : 'YEARS'}`;
+                    text = `${diffYears} ${diffYears === 1 ? 'YEAR' : 'YEARS'}`;
                 }
 
                 let colorClass = 'bg-blue-100 text-blue-800'; // Default
